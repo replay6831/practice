@@ -6,7 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    Testing
+    <script type="text/javascript">
+        function getQueryStringObject() {
+            var a = window.location.search.substr(1).split('&');
+            var first_value = a[Object.keys(a)[0]];
+            var text_value = first_value.split('=')[1]
+            document.write(text_value + "<br>");
+        }
+        var qs = getQueryStringObject();
+    </script>
     
 </body>
 </html>
