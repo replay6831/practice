@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>의료할인혜택</title>
 </head>
 <body>
     <h1><strong id="industry"></strong><span> 의료할인혜택 한눈에 확인하기</span></h1> 
@@ -12,7 +12,10 @@
         function getQueryStringObject() {
             var sub_url = window.location.search.substr(1);
             var sub_value = sub_url.split('=')[1];
-            var exp_value = decodeURIComponent(sub_value)
+            var exp_value = decodeURIComponent(sub_value);
+            if (exp_value == "undefined") {
+                exp_value = ""
+            }
             document.getElementById("industry").innerHTML=exp_value; 
         }
         var qs = getQueryStringObject();
