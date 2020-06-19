@@ -6,12 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <h1><strong id="industry"></strong><span> 의료할인혜택 한눈에 확인하기</span></h1> 
+
     <script type="text/javascript">
         function getQueryStringObject() {
-            var a = window.location.search.substr(1).split('&');
-            var first_value = a[Object.keys(a)[0]];
-            var text_value = first_value.split('=')[1]
-            document.write(text_value + "<br>");
+            var sub_url = window.location.search.substr(1);
+            var sub_value = sub_url.split('=')[1];
+            var exp_value = decodeURIComponent(sub_value)
+            document.getElementById("industry").innerHTML=exp_value; 
         }
         var qs = getQueryStringObject();
     </script>
