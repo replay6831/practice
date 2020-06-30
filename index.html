@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>의료할인혜택</title>
+    <title>Coogle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1><strong id="industry"></strong><span> 의료할인혜택 한눈에 확인하기</span></h1> 
-
-    <script type="text/javascript">
-        function getQueryStringObject() {
-            var sub_url = window.location.search.substr(1);
-            var sub_value = sub_url.split('=')[1];
-            var exp_value = decodeURIComponent(sub_value);
-            if (exp_value == "undefined") {
-                exp_value = ""
-            }
-            document.getElementById("industry").innerHTML=exp_value; 
-        }
-        var qs = getQueryStringObject();
-    </script>
-    
+    <h1>
+        <span>C</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+    </h1>
+    <form action="https://www.google.com/search" method="GET">
+        <div class="search-container align-center">
+            <input type="checkbox" id="search-trigger">
+            <label for="search-trigger">
+                <div class="search-toggle" style="width: 150px; height: 150px; top: 30px;"></div>
+            </label>
+            <label class="search-field">
+                <input type="text" name="q" placeholder="Google 검색" style="height: 100px;margin-top: 35px">
+                <div class="corners"></div>
+            </label>
+        </div>  
+    </form>
 </body>
 </html>
